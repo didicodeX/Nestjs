@@ -1,0 +1,1 @@
+L'objet request est composé du Body, des query paramètres, des paths paramètres et des headers.
