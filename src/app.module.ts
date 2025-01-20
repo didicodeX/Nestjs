@@ -7,6 +7,7 @@ import { DogService } from './dog/dog.service';
 @Module({
   imports: [],
   controllers: [AppController, DogController],
+  // renseigne tout mes providers definie dans les fichier .services.ts
   providers: [AppService, DogService],
 })
-export class AppModule {}
+export class AppModule { }

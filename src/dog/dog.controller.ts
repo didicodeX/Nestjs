@@ -1,9 +1,13 @@
-import { Controller, Post } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { DogService } from './dog.service';
 
+// dogController est un consumer de DogServices
+// le DogService est injecte au DogController a l'aide de la declaration de son type dans son constructeur
 @Controller('dog')
 export class DogController {
-  @Post("all")
-  findAll() : string {
-    return "Post all dogs"
+  constructor(private readonly dogService: DogService){}
+  @Get("all")
+  findAll() : Promise<string[]> {
+    return this.dogService.findAll();
   }
 }
