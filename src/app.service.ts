@@ -6,7 +6,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  getCustomHello() : string {
+  getCustomHello(): string {
     return "Custom Hello World"
   }
 }
